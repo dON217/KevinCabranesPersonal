@@ -1,75 +1,41 @@
 body {
-    margin: 5%;
+    
     background-color: #ff5757; /* Matches the background color from your example */
-}
-h1{
-    margin: 0px;
-}
-.personalInfo
-{
-
-    text-align: right;
-    font-size: calc(.8vw + .7vh);
-
 }
 
 header{
-    top: 10%;
-    transition: .15s ease;
-}
-
-.headerfont
-{
-    background-color: #fff;
-    letter-spacing: .15rem;
-    
-    
-}
-
-.banner
-{
-    top: 10%;
-    width: 100%;
-}
-
-
-.portfolio {
-    text-align: center;
-    color:  #322948;  /* Dark blue color */
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 9em; /* Large font size */
-}
-    
-.sticky
-{
+    padding: 1rem;
     position: fixed;
-    left: 0;
+    height: 75px;
     width: 100%;
-    background-color: #fff;
+    left: 0;
     top: 0;
-    transition: .15s ease;
-    z-index: 300;
+    background-color: #fff;
+    text-align: center;
 }
 
-h2 {
-    font-size: 30px;
-    font-family: 'Montserrat Alternates', sans-serif;
-    line-height: 1;
-    color: #322948;
-}
+   
 
-p {
-    font-size: calc(.7vw + .6vh);
-    font-family: 'Ruda', sans-serif;
-    line-height: 1.5;
+.NameInfo
+{
     text-decoration: none;
-    color: #322948;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #fff;
+    text-align: center;
+
+}
+
+h3
+{
+    
+    font-size: 30px;
     font-weight: bold;
 }
 
 
 ul {  
-    display: flex;
+  display: flex;
+  text-align: center;
 }
 
 ul li {
@@ -81,86 +47,23 @@ ul li a{
     text-decoration: none;
     font-family: 'Montserrat Alternates', sans-serif;
     color: #322948;
-    font-size: calc(1.2vw + 1.2vh);
+    font-size: 30px;
     font-weight: bold;
 }
 
-.off-screen-menu {
-    text-decoration: none;
-    background-color: 
-     #fff;
-    list-style: none;
-    height: 100vh;
-    width: 100%;
-    list-style: none;
-    max-width: 450px;
-    position: absolute;
-    top: 0;
-    left: -4500px;
-    display: flex;
-    align-items: center;    
-    justify-content: center;
-    font-size: 30px;
-    font-family: 'Montserrat Alternates', sans-serif;
-    margin-bottom: 10px;
-    transition: .15s ease;
-}
-.off-screen-menu.active {
-    
-    left: 0;
-    z-index: 1; 
-}
 
-
-/* ham menu */
-.ham-menu {
-    height: 50px;
-    width: 40px;
-    position: fixed;    
-    left: 50px;
-   
+.home
+{
+    background-color: #fff;
 }
-.ham-button{
-    position: fixed;
-    top: 9px;
-    right: 20px;
-    height: 35px;
-    width: 50px;
-    
-    z-index: 1000;
+.gamedesign
+{
+    background-color: #fff;
 }
-.ham-menu span {
-    height: 5px;
-    width: 100%;
-    background-color: #322948;
-    border-radius: 25px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    transition: .2s ease;
-        
-  
+.aniamtion
+{
+    background-color: #fff
 }
-.ham-menu span:nth-child(1) {
-    top: 25%;
-}
-.ham-menu span:nth-child(3) {
-    top: 75%;
-}
-
-.ham-menu.active span:nth-child(1) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-.ham-menu.active span:nth-child(2) {
-    opacity: 0;
-}
-.ham-menu.active span:nth-child(3) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-
 
 
 .about-me, .experience{
@@ -175,13 +78,13 @@ ul li a{
 .unreal-engineLabel
 {
     padding-top: 15%;
-    margin-left: -7%;
+    margin-left: -15%;
 }
 .UnrealText
 {
     aspect-ratio: 16/10;
     height: 300px;
-    width: 1000px;
+    width: 60%;
 
 }
 
@@ -189,75 +92,29 @@ ul li a{
 {
     padding-top: 10%;
     padding-left: 30%;
-    padding-bottom: 10%;
     height: 60px;
     width: 800px;
 }
 
-.Project1 
-{
-    display: flex;
-    background-color:#fff;
-    width: 95%;
-
-}
-
-.Project1Description
-{    
-    padding-left: 5%;
-    padding-bottom: 5%;
-    right: 1px;
-    flex-grow: 1, inherit;
-}
-.Project1VideoPicture
-{
-    height: 450px;
-    width: 850px;
-    position: relative;
-    left: 9em;
-    bottom: 60px;
-    box-shadow: -20px 20px 0px 5px #322948;
+h2 {
+    font-size: 30px;    
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-bottom: 10px;
     
 }
-.Project1Video
-{
-    padding-right: 2%;
-    position: relative;
-    text-decoration: none;
-    bottom: 9rem;
-    left: 90rem;
+
+p {
+    font-size: 18px;
+    font-family: 'Ruda', sans-serif;
+    line-height: 1.5;
 }
 
-.Project2 
-{
-    display: flex;
-    background-color:#fff;
-    width: 95%;
-    margin-top: 5%;
 
-}
 
-.Project2Description
-{    
-    padding-right: 5%;
-    padding-bottom: 5%;
-    right: 1px;
-}
-.Project2VideoPicture
-{
-    height: 450px;
-    width: 850px;
-
-    position: relative;
-    left: -5em;
-    bottom: 60px;
-    box-shadow: 20px 20px 0px 5px #322948;
-    
-}
-.Project2Video
-{
-    padding-left: 2%;
-    position: relative;
-    text-decoration: none;
-    bottom: 10rem;
+/* New styles for Portfolio section */
+.portfolio {
+  text-align: center;
+  color:  #322948;  /* Dark blue color */
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 160px; /* Large font size */
 }
