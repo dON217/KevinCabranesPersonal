@@ -7,6 +7,9 @@ hamMenu.addEventListener("click", () => {
   offScreenMenu.classList.toggle("active");
 });
 
+window.onscroll = function() {scrollFunction()};
+
+
 // Get the navbar
 const navbar = document.getElementById("banner");
 
@@ -22,4 +25,12 @@ window.onscroll = function() {
   }
 };
 
+/*
 
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.fontSize = "30px";
+  } else {
+    document.getElementById("header").style.fontSize = "90px";
+  }
+}; */

@@ -1,20 +1,45 @@
 body {
-    margin: 10%;
+    margin: 5%;
     background-color: #ff5757; /* Matches the background color from your example */
 }
+h1{
+    margin: 0px;
+}
+.personalInfo
+{
 
-header {
-    margin-left:  9%;
-    padding: 1rem;
-    display: block;
-    position: fixed;
-    width: 80%;
-    height: 75px;
-    top: 0;
-    left: 9%;
+    text-align: right;
+    font-size: calc(.8vw + .7vh);
+
+}
+
+header{
+    top: 10%;
+    transition: .15s ease;
+}
+
+.headerfont
+{
+    background-color: #fff;
+    letter-spacing: .15rem;
+    
+    
+}
+
+.banner
+{
+    top: 10%;
+    width: 100%;
 }
 
 
+.portfolio {
+    text-align: center;
+    color:  #322948;  /* Dark blue color */
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 9em; /* Large font size */
+}
+    
 .sticky
 {
     position: fixed;
@@ -23,7 +48,25 @@ header {
     background-color: #fff;
     top: 0;
     transition: .15s ease;
+    z-index: 300;
 }
+
+h2 {
+    font-size: 30px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    line-height: 1;
+    color: #322948;
+}
+
+p {
+    font-size: calc(.7vw + .6vh);
+    font-family: 'Ruda', sans-serif;
+    line-height: 1.5;
+    text-decoration: none;
+    color: #322948;
+    font-weight: bold;
+}
+
 
 ul {  
     display: flex;
@@ -38,7 +81,7 @@ ul li a{
     text-decoration: none;
     font-family: 'Montserrat Alternates', sans-serif;
     color: #322948;
-    font-size: 30px;
+    font-size: calc(1.2vw + 1.2vh);
     font-weight: bold;
 }
 
@@ -119,19 +162,6 @@ ul li a{
 
 
 
-.home
-{
-    background-color: #fff;
-}
-.gamedesign
-{
-    background-color: #fff;
-}
-.aniamtion
-{
-    background-color: #fff
-}
-
 
 .about-me, .experience{
     background-color: #fff;
@@ -145,13 +175,13 @@ ul li a{
 .unreal-engineLabel
 {
     padding-top: 15%;
-    margin-left: -15%;
+    margin-left: -7%;
 }
 .UnrealText
 {
     aspect-ratio: 16/10;
     height: 300px;
-    width: 60%;
+    width: 1000px;
 
 }
 
@@ -159,38 +189,75 @@ ul li a{
 {
     padding-top: 10%;
     padding-left: 30%;
+    padding-bottom: 10%;
     height: 60px;
     width: 800px;
 }
 
-.Project 
+.Project1 
 {
-    padding-top: 10%;
+    display: flex;
+    background-color:#fff;
+    width: 95%;
+
 }
-h2 {
-    font-size: 30px;
-    font-family: 'Montserrat Alternates', sans-serif;
-    margin-bottom: 10px;
+
+.Project1Description
+{    
+    padding-left: 5%;
+    padding-bottom: 5%;
+    right: 1px;
+    flex-grow: 1, inherit;
+}
+.Project1VideoPicture
+{
+    height: 450px;
+    width: 850px;
+    position: relative;
+    left: 9em;
+    bottom: 60px;
+    box-shadow: -20px 20px 0px 5px #322948;
     
 }
-
-p {
-    font-size: 18px;
-    font-family: 'Ruda', sans-serif;
-    line-height: 1.5;
+.Project1Video
+{
+    padding-right: 2%;
+    position: relative;
+    text-decoration: none;
+    bottom: 9rem;
+    left: 90rem;
 }
 
+.Project2 
+{
+    display: flex;
+    background-color:#fff;
+    width: 95%;
+    margin-top: 5%;
 
+}
 
-/* New styles for Portfolio section */
-.portfolio {
-  text-align: center;
-  margin: 0;
-  padding: 0%;
-  font-optical-sizing: none;
-  color:  #322948;  /* Dark blue color */
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 160px; /* Large font size */
-  margin: 0;
+.Project2Description
+{    
+    padding-right: 5%;
+    padding-bottom: 5%;
+    right: 1px;
+}
+.Project2VideoPicture
+{
+    height: 450px;
+    width: 850px;
 
+    position: relative;
+    left: -5em;
+    bottom: 60px;
+    box-shadow: 20px 20px 0px 5px #322948;
+    
+}
+.Project2Video
+{
+    padding-left: 2%;
+    position: relative;
+    text-decoration: none;
+    bottom: 10rem;
 }
