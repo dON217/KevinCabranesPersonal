@@ -14,24 +14,21 @@ header{
     text-align: center;
 }
 
-   
 
 .NameInfo
 {
     text-decoration: none;
     font-family: 'Montserrat Alternates', sans-serif;
-    color: #fff;
+    color: #322948;
     text-align: center;
+    font-size: 40px;
 
 }
 
-h3
-{
-    
-    font-size: 30px;
-    font-weight: bold;
-}
-
+ h4
+ {
+    font-size: 35;
+ }
 
 ul {  
   display: flex;
