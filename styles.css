@@ -1,173 +1,251 @@
-/* Base Styles a*/
-:root {
-    --primary-color: #ff5757;
-    --secondary-color: #322948;
-    --background-color: #fff;
-    --text-dark: #2a2a2a;
-}
-
-body {
-    background-color: var(--primary-color);
-    color: var(--text-dark);
+/* Reset basic elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body styling */
+  body {
+    background-color: #ff5757;
     font-family: 'Ruda', sans-serif;
-    line-height: 1.6;
-    padding-top: 80px;
-}
-
-/* Header & Navigation */
-header {
+  }
+  
+  /* Header and Navigation with slide-down animation */
+  header {
+    padding: 1rem;
     position: fixed;
-    top: 0;
+    height: 75px;
     width: 100%;
-    background: var(--background-color);
-    padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    text-align: center;
     z-index: 1000;
-}
-
-nav ul {
+    animation: slideDown 1s ease;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  header nav ul {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    padding: 0;
-    margin: 0;
-}
-
-nav a {
-    color: var(--secondary-color);
+    list-style: none;
+  }
+  
+  header nav ul li {
+    margin: 0 20px;
+  }
+  
+  header nav ul li a {
     text-decoration: none;
     font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--primary-color);
-}
-
-/* Main Content Sections */
-.card {
-    background: var(--background-color);
-    margin: 2rem auto;
-    padding: 2rem;
-    max-width: 1200px;
-    box-shadow: 20px 20px 0 5px var(--secondary-color);
-}
-
-.portfolio h1 , h3{
-    font-size: clamp(4rem, 15vw, 10rem);
-    color: var(--secondary-color);
+    color: #322948;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  /* Portfolio Section */
+  .portfolio {
     text-align: center;
-    margin: 2rem 0;
+    color: #322948;
     font-family: 'Montserrat Alternates', sans-serif;
-}
-
-.name-info {
+    font-size: 160px;
+    margin-top: 100px; /* Prevents overlap with the fixed header */
+  }
+  
+  /* Name and Info Section */
+  .NameInfo {
     text-align: center;
-    margin: 3rem 0;
-}
-
-.name-info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.email {
-    font-size: 1.2rem;
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-/* Projects Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1400px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #322948;
+    margin: 20px 0;
+  }
+  
+  .NameInfo h3 {
+    font-size: 40px;
+  }
+  
+  .NameInfo h4 {
+    font-size: 30px;
+    margin: 10px 0;
+  }
+  
+  .NameInfo p {
+    font-size: 20px;
+  }
+  
+  /* About Me Section */
+  .about-me {
+    background-color: #fff;
+    margin: 100px auto;
+    padding: 20px;
+    width: 63%;
+    box-shadow: 20px 20px 0px 5px #322948;
+    text-align: center;
+  }
+  
+  .about-me h2 {
+    font-size: 30px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .about-me p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Slider Presentation Section */
+  .slider {
+    background-color: #fff;
+    margin: 50px auto;
+    padding: 20px;
+    width: 63%;
+    box-shadow: 20px 20px 0px 5px #322948;
+    text-align: center;
+  }
+  
+  .slider-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+  
+  .slider-container img.slider-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(50, 41, 72, 0.8);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .slider-btn.prev {
+    left: 10px;
+  }
+  
+  .slider-btn.next {
+    right: 10px;
+  }
+  
+  /* Experience Section */
+  .experience {
+    background-color: #fff;
+    margin: 100px auto;
+    padding: 20px;
+    width: 63%;
+    box-shadow: 20px 20px 0px 5px #322948;
+    text-align: center;
+  }
+  
+  .experience h2 {
+    font-size: 30px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .experience p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Unreal Engine Section */
+  .unreal-engineLabel {
+    padding-top: 15%;
+    margin-left: -15%;
+  }
+  
+  .UnrealText {
+    aspect-ratio: 16/10;
+    height: 300px;
+    width: 60%;
+    display: block;
     margin: 0 auto;
-}
-
-.project-card {
-    background: var(--background-color);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.project-info {
-    padding: 1.5rem;
-}
-
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.skill-item {
+  }
+  
+  /* Level Design Section */
+  .DesignText {
+    padding-top: 10%;
+    padding-left: 30%;
+    height: 60px;
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Projects Section with Floating Boxes */
+  .projects {
+    background-color: #fff;
+    margin: 100px auto;
+    padding: 20px;
+    width: 63%;
+    box-shadow: 20px 20px 0px 5px #322948;
     text-align: center;
-    padding: 1.5rem;
-    background: #f8f8f8;
-    border-radius: 10px;
-}
-
-/* Unreal Engine Section */
-.unreal-section {
-    max-width: 1400px;
-    margin: 4rem auto;
-    padding: 2rem;
-}
-
-.engine-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
-}
-
-.engine-content img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-    .engine-content {
-        grid-template-columns: 1fr;
-    }
-    
-    nav ul {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Typography */
-h2 {
+  }
+  
+  .projects h2 {
+    font-size: 30px;
     font-family: 'Montserrat Alternates', sans-serif;
-    color: var(--secondary-color);
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
+    margin-bottom: 20px;
+  }
+  
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .project-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 30%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Styling */
+  @media screen and (max-width: 768px) {
+    .portfolio {
+      font-size: 80px;
+    }
+    .about-me,
+    .experience,
+    .slider,
+    .projects {
+      width: 90%;
+      margin: 50px auto;
+    }
+    header nav ul li {
+      margin: 0 10px;
+    }
+    header nav ul li a {
+      font-size: 20px;
+    }
+    .project-box {
+      width: 90%;
+    }
+  }
+  

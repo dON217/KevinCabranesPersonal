@@ -1,106 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Cabranes - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kevin Cabranes Portfolio - Game Design and Level Design" />
+  <title>Kevin Cabranes Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>             
-                <li><a href="#home">home</a></li>
-                <li><a href="#level-design">level design</a></li>
-                <li><a href="#presentation">projects</a></li>
-                <li><a href="#skills">skills</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <ul>
+        <li class="home"><a href="index.html">home</a></li>
+        <li class="gamedesign"><a href="#LevelDesign">level design</a></li>
+        <li class="animation"><a href="#">system design</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="home" class="portfolio">
-            <h1>PORTFOLIO</h1>
-        </section>
+  <section class="portfolio">
+    <h1>PORTFOLIO</h1>
+  </section>
 
-        <section class="name-info">
-            <h2>Kevin Cabranes</h2>
-            <h3>Game Designer</h3>
-            
-            <a href="mailto:kevincabranes1998@gmail.com" class="email">kevincabranes1998@gmail.com</a>
-        </section>
+  <section class="NameInfo">
+    <h3>Kevin Cabranes</h3>
+    <h4>Game Designer</h4>
+    <p>kevincabranes1998@gmail.com</p>
+  </section>
 
-        <section id="about" class="about-me card">
-            <h2>About Me</h2>
-            <p>
-                I’m a game designer passionate about crafting engaging mechanics, immersive content, and compelling narratives. I thrive on collaboration and persistence, ensuring every system and story element works together to create a meaningful player experience. With a focus on world-building, interactive storytelling, and player-driven experiences, I approach design with adaptability and a commitment to refining ideas through iteration.
-            </p>
-        </section>
+  <section class="about-me" id="aboutme">
+    <h2>About Me</h2>
+    <p>
+      I am a dedicated Game Designer with a strong focus on game content and narrative design. I strive to create immersive, story-driven experiences and innovative gameplay mechanics that captivate and inspire players.
+    </p>
+  </section>
 
-        <section id="skills" class="skills card">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <h3>Programming</h3>
-                    <p>C++, C#</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Scripting</h3>
-                    <p>Unreal Blueprints</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Unreal Engine 5</h3>
-                    <p>Level Design, Animations, Materials, AI</p>
-                </div>
-            </div>
-        </section>
+  <!-- Presentation Slider moved right after About Me -->
+  <section class="slider" id="slider2">
+    <h2>Presentation 2</h2>
+    <div class="slider-container" data-images='["images/Affordance.png", "images/GuidingLines.png", "images/Landmarks.png"]'>
+      <button class="slider-btn prev">&#10094;</button>
+      <img class="slider-image" src="images/Affordance.png" alt="Slide 1" />
+      <button class="slider-btn next">&#10095;</button>
+    </div>
+  </section>
 
-        <section id="presentation" class="presentation">
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <img src="images/project1.jpg" alt="Level Design Project">
-                    <div class="project-info">
-                        <h3>Adventure Maze</h3>
-                        <p>Dynamic level design with interactive environmental storytelling</p>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <img src="images/project2.jpg" alt="AI System Design">
-                    <div class="project-info">
-                        <h3>Smart AI Ecosystem</h3>
-                        <p>Complex AI behavior trees for realistic NPC interactions</p>
-                    </div>
-                </article>
-                <article class="project-card">
-                    <img src="images/project3.jpg" alt="Material Design">
-                    <div class="project-info">
-                        <h3>Advanced Materials</h3>
-                        <p>Custom shaders and material creation in UE5</p>
-                    </div>
-                </article>
-            </div>
-        </section>
 
-        <section id="level-design" class="unreal-section">
-            <h2>Unreal Engine Expertise</h2>
-            <div class="engine-content">
-                <img src="images/ue5-showcase.jpg" alt="Unreal Engine 5 Projects">
-                <div class="engine-info">
-                    <h3>Level Design Mastery</h3>
-                    <p>Specializing in creating immersive 3D environments with optimized workflows</p>
-                    <ul class="features-list">
-                        <li>Modular asset implementation</li>
-                        <li>Lighting & atmosphere design</li>
-                        <li>Interactive element integration</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
+  <section class="slider" id="slider2">
+    <h2>Presentation 2</h2>
+    <div class="slider-container" data-images='["images/Affordance.png", "images/GuidingLines.png", "images/Landmarks.png"]'>
+      <button class="slider-btn prev">&#10094;</button>
+      <img class="slider-image" src="images/Affordance.png" alt="Slide 1" />
+      <button class="slider-btn next">&#10095;</button>
+    </div>
+  </section>
 
-    <script src="script.js"></script> 
+  <section class="slider" id="slider2">
+    <h2>Presentation 2</h2>
+    <div class="slider-container" data-images='["images/Affordance.png", "images/GuidingLines.png", "images/Landmarks.png"]'>
+      <button class="slider-btn prev">&#10094;</button>
+      <img class="slider-image" src="images/Affordance.png" alt="Slide 1" />
+      <button class="slider-btn next">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="experience">
+    <h2>Skills</h2>
+    <p>- Programming (C++, C#)</p>
+    <p>- Scripting (Unreal Blueprints)</p>
+    <p>- Unreal Engine 5 (Level Design, Animations, Materials, AI)</p>
+  </section>
+
+
+  <!-- Projects Section with Floating Boxes -->
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-container">
+      <div class="project-box">
+        <h3>Project 1</h3>
+        <p>Description of project 1.</p>
+      </div>
+      <div class="project-box">
+        <h3>Project 2</h3>
+        <p>Description of project 2.</p>
+      </div>
+      <div class="project-box">
+        <h3>Project 3</h3>
+        <p>Description of project 3.</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
