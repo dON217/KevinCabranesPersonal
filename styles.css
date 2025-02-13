@@ -1,28 +1,64 @@
-/* Reset basic elements */
-* {
+/* CSS Variables */
+:root {
+    --primary-color: #322948;
+    --secondary-color: #ca6969;
+    --dark-primarycolor: #1b1a1a;
+    --dark-secondarycolor: #161616;
+    --light-color: #f8d6bf;
+    --dark-bg: #1e1e1e;
+    --transition-speed: 0.3s;
+    --font-main: 'Ruda', sans-serif;
+    --font-heading: 'Montserrat Alternates', sans-serif;
+  }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-primarycolor);
+  }
+  
+  body.dark-mode header,
+  body.dark-mode .about-me,
+  body.dark-mode .experience,
+  body.dark-mode .slider,
+  body.dark-mode .projects,
+  body.dark-mode .contact {
+    background-color: #333;
+    box-shadow: 20px 20px 0px 5px var(--dark-secondarycolor);
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Reset */
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   
-  /* Body styling */
+  /* Body */
   body {
-    background-color: #ff5757;
-    font-family: 'Ruda', sans-serif;
+    background-color: var(--secondary-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--primary-color);
   }
   
-  /* Header and Navigation with slide-down animation */
+  /* Header & Navigation */
   header {
     padding: 1rem;
     position: fixed;
-    height: 75px;
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: var(--light-color);
     text-align: center;
     z-index: 1000;
     animation: slideDown 1s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   @keyframes slideDown {
@@ -46,70 +82,84 @@
   
   header nav ul li a {
     text-decoration: none;
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: #322948;
-    font-size: 30px;
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.875rem;
     font-weight: bold;
+    transition: color var(--transition-speed);
+  }
+  
+  header nav ul li a:hover,
+  header nav ul li a.active {
+    color: var(--secondary-color);
+  }
+  
+  /* Dark Mode Toggle Button */
+  #darkModeToggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 20px;
   }
   
   /* Portfolio Section */
   .portfolio {
     text-align: center;
-    color: #322948;
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 160px;
-    margin-top: 100px; /* Prevents overlap with the fixed header */
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-size: 10rem;
+    margin-top: 100px; /* Offset for fixed header */
   }
   
-  /* Name and Info Section */
+  /* Name Info Section */
   .NameInfo {
     text-align: center;
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: #322948;
+    font-family: var(--font-heading);
+    color: var(--primary-color);
     margin: 20px 0;
   }
   
   .NameInfo h3 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   
   .NameInfo h4 {
-    font-size: 30px;
+    font-size: 1.875rem;
     margin: 10px 0;
   }
   
   .NameInfo p {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   
   /* About Me Section */
   .about-me {
-    background-color: #fff;
+    background-color: var(--light-color);
     margin: 100px auto;
     padding: 20px;
     width: 63%;
-    box-shadow: 20px 20px 0px 5px #322948;
+    box-shadow: 20px 20px 0px 5px var(--primary-color);
     text-align: center;
   }
   
   .about-me h2 {
-    font-size: 30px;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.875rem;
+    font-family: var(--font-heading);
     margin-bottom: 10px;
   }
   
   .about-me p {
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 1.125rem;
   }
   
-  /* Slider Presentation Section */
+  /* Slider Section */
   .slider {
-    background-color: #fff;
+    background-color: var(--light-color);
     margin: 50px auto;
     padding: 20px;
     width: 63%;
-    box-shadow: 20px 20px 0px 5px #322948;
+    box-shadow: 20px 20px 0px 5px var(--primary-color);
     text-align: center;
   }
   
@@ -123,6 +173,8 @@
     width: 100%;
     height: auto;
     display: block;
+    transition: opacity 0.5s ease-in-out; /* Fade transition */
+    opacity: 1;
   }
   
   .slider-btn {
@@ -130,11 +182,16 @@
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(50, 41, 72, 0.8);
-    color: #fff;
+    color: var(--light-color);
     border: none;
     padding: 10px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 1.5rem;
+    transition: background-color var(--transition-speed);
+  }
+  
+  .slider-btn:hover {
+    background-color: rgba(50, 41, 72, 1);
   }
   
   .slider-btn.prev {
@@ -147,24 +204,52 @@
   
   /* Experience Section */
   .experience {
-    background-color: #fff;
+    background-color: var(--light-color);
     margin: 100px auto;
-    padding: 20px;
+    padding: 40px;
     width: 63%;
-    box-shadow: 20px 20px 0px 5px #322948;
     text-align: center;
-  }
-  
-  .experience h2 {
+    box-shadow: 20px 20px 0px 5px #322948;
+}
+
+/* Title */
+.experience h2 {
     font-size: 30px;
     font-family: 'Montserrat Alternates', sans-serif;
-    margin-bottom: 10px;
-  }
-  
-  .experience p {
-    font-size: 18px;
-    line-height: 1.5;
-  }
+    color: #322948;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Skills Container */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Individual Skill Card */
+.skill-card {
+    background-color: #ff5757; /* Your primary red */
+    color: var(--primary-color);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 30px;
+    box-shadow: 5px 5px 0px #322948;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.skill-card:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 0px #322948;
+    background-color: #d04646; /* Slightly darker red */
+}
+
   
   /* Unreal Engine Section */
   .unreal-engineLabel {
@@ -190,19 +275,19 @@
     margin: 0 auto;
   }
   
-  /* Projects Section with Floating Boxes */
+  /* Projects Section */
   .projects {
-    background-color: #fff;
+    background-color: var(--light-color);
     margin: 100px auto;
     padding: 20px;
     width: 63%;
-    box-shadow: 20px 20px 0px 5px #322948;
+    box-shadow: 20px 20px 0px 5px var(--primary-color);
     text-align: center;
   }
   
   .projects h2 {
-    font-size: 30px;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.875rem;
+    font-family: var(--font-heading);
     margin-bottom: 20px;
   }
   
@@ -217,7 +302,7 @@
     background-color: #f0f0f0;
     padding: 20px;
     width: 30%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
     cursor: pointer;
   }
   
@@ -226,15 +311,85 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   
-  /* Responsive Styling */
+  /* Contact Section */
+  .contact {
+    background-color: var(--light-color);
+    margin: 100px auto;
+    padding: 20px;
+    width: 63%;
+    box-shadow: 20px 20px 0px 5px var(--primary-color);
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 1.875rem;
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contact form label {
+    font-size: 1.125rem;
+    text-align: left;
+  }
+  
+  .contact form input,
+  .contact form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+  }
+  
+  .contact form button {
+    padding: 10px;
+    font-size: 1.125rem;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+  }
+  
+  .contact form button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Back-to-Top Button */
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+    transition: opacity var(--transition-speed);
+  }
+  
+  #backToTop.show {
+    display: block;
+  }
+  
+  /* Responsive Styles */
   @media screen and (max-width: 768px) {
     .portfolio {
-      font-size: 80px;
+      font-size: 5rem;
     }
     .about-me,
     .experience,
     .slider,
-    .projects {
+    .projects,
+    .contact {
       width: 90%;
       margin: 50px auto;
     }
@@ -242,7 +397,7 @@
       margin: 0 10px;
     }
     header nav ul li a {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
     .project-box {
       width: 90%;
