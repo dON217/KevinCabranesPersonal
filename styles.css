@@ -1,0 +1,173 @@
+/* Base Styles a*/
+:root {
+    --primary-color: #ff5757;
+    --secondary-color: #322948;
+    --background-color: #fff;
+    --text-dark: #2a2a2a;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-dark);
+    font-family: 'Ruda', sans-serif;
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+/* Header & Navigation */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--background-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Main Content Sections */
+.card {
+    background: var(--background-color);
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1200px;
+    box-shadow: 20px 20px 0 5px var(--secondary-color);
+}
+
+.portfolio h1 {
+    font-size: clamp(4rem, 15vw, 10rem);
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 2rem 0;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.name-info {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.name-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.email {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: var(--background-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f8f8f8;
+    border-radius: 10px;
+}
+
+/* Unreal Engine Section */
+.unreal-section {
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 2rem;
+}
+
+.engine-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.engine-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .engine-content {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Typography */
+h2 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
