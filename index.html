@@ -2,123 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Kevin Cabranes Portfolio - Game Designer specializing in game content and narrative design." />
-  <meta name="keywords" content="Game Design, Narrative Design, Level Design, Portfolio" />
-  <meta property="og:title" content="Kevin Cabranes Portfolio" />
-  <meta property="og:description" content="Portfolio of Kevin Cabranes, a Game Designer focusing on immersive content and narrative design." />
-  <meta property="og:image" content="images/og-image.jpg" />
-  <meta property="og:url" content="https://yourdomain.com" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <title>Kevin Cabranes Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="manifest" href="manifest.json" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name | Game Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header with Navigation and Dark Mode Toggle -->
-  <header>
-    <nav role="navigation">
-      <ul>
-        <li class="nav-item home"><a href="#home">Home</a></li>
-        <li class="nav-item gamedesign"><a href="#projects">Projects</a></li>
-        <li class="nav-item animation"><a href="#experience">Skillset</a></li>
-        <li class="nav-item animation"><a href="#contact">Contact</a></li>
-        
-      </ul>
-      <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌒</button>
-    </nav>
-  </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Portfolio Heading -->
-    <section id="home" class="portfolio">
-      <h1>PORTFOLIO</h1>
-    </section>
+  <!-- Hamburger & Overlay Menu -->
+  <button id="menu-open" class="menu-btn">☰</button>
+  <div id="nav-overlay" class="nav-overlay">
+    <button id="menu-close" class="menu-btn">✕</button>
+    <ul class="menu-list">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
 
-    <!-- Name & Contact Info -->
-    <section class="NameInfo">
-      <h3>Kevin Cabranes</h3>
-      <h4>Game Designer</h4>
-      <p>kevincabranes1998@gmail.com</p>
-    </section>
+  <!-- Hero (with avatar) -->
+  <section class="hero">
+    <img src="images/Portrait.jpg" alt="Your Name" class="hero-avatar">
+    <div class="hero-text">
+      <h1>Kevin Cabranes</h1>
+      <p>Game Designer • Content Creator • Narrative Designer • Level Designer • Combat Systems Designer</p>
+    </div>
+  </section>
 
-    <!-- About Me Section -->
-    <section class="about-me" id="aboutme">
-      <h2>About Me</h2>
-      <p>
-        I am a dedicated Game Designer with a strong focus on game content and narrative design. I strive to create immersive, story-driven experiences and innovative gameplay mechanics that captivate and inspire players.
-      </p>
-    </section>
-    
+  <!-- About -->
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <p>I’m a game designer specializing in dialogue systems, NPC simulation, and procedural narrative. Experienced in UE5 Blueprints, Behavior Trees, and Niagara-driven motion comics.</p>
+  </section>
 
-    <!-- Projects Section with Floating Boxes -->
-    <section class="projects" id="projects">
-        <h2>Projects</h2>
-        <div class="project-container">
-          <div class="project-box">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
-          </div>
-          <div class="project-box">
-            <h3>Project 2</h3>
-            <p>Description of project 2.</p>
-          </div>
-          <div class="project-box">
-            <h3>Project 3</h3>
-            <p>Description of project 3.</p>
-          </div>
-        </div>
-      </section>
-  
-    <!-- Presentation Slider (Using Data Attributes for Images) -->
-    <section class="slider" id="slider1">
-      <h2>Presentation</h2>
-      <div class="slider-container" data-images='["images/Landmarks.png", "images/Affordance.png", "images/GuidingLines.png"]'>
-        <button class="slider-btn prev" aria-label="Previous Slide">&#10094;</button>
-        <img class="slider-image" src="images/Landmarks.png" alt="Slide 1" loading="lazy" />
-        <button class="slider-btn next" aria-label="Next Slide">&#10095;</button>
+  <!-- Projects with Filter -->
+  <section id="projects" class="section projects">
+    <h2>Projects</h2>
+    <div class="filters">
+      <button data-filter="all" class="filter-btn active">All</button>
+      <button data-filter="systems" class="filter-btn">Systems</button>
+      <button data-filter="narrative" class="filter-btn">Narrative</button>
+      <button data-filter="simulation" class="filter-btn">Simulation</button>
+    </div>
+    <div class="grid">
+      <!-- Example project -->
+      <div class="grid-item" data-category="systems"
+           data-title="Inventory System"
+           data-desc="An Unreal Engine 5 Blueprint system with drag-and-drop, stacking, and weight calculations."
+           data-download="https://yourlink.com/files.zip"
+           data-media='["placeholder1.jpg","placeholder1b.jpg","demo.mp4"]'>
+        <img src="placeholder1.jpg" alt="Inventory System">
+        <h3>Inventory System</h3>
       </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="experience" id="experience">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill-card">Programming (C++, C#)</div>
-            <div class="skill-card">Unreal Engine 5 Blueprints</div>
-            <div class="skill-card">Unreal Engine 5 Level Design Tools</div>
-            <div class="skill-card">Animation Sequencer</div>
-            <div class="skill-card">Atlassian Suite</div>
-            <div class="skill-card">Figma</div>
-        </div>
-    </section>
+      <div class="grid-item" data-category="narrative"
+           data-title="Dialogue"
+           data-desc="An Unreal Engine 5 Blueprint system with drag-and-drop, stacking, and weight calculations."
+           data-download="https://yourlink.com/files.zip"
+           data-media='["placeholder1.jpg","placeholder1b.jpg","demo.mp4"]'>
+        <img src="placeholder1.jpg" alt="Dialogue">
+        <h3>Branching Dialogue</h3>
+      </div>
 
-    <!-- Contact / Call-to-Action Section -->
-    <section class="contact" id="contact">
-      <h2>Contact</h2>
-      <form id="contactForm" action="mailto:kevincabranes1998@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
+      <div class="grid-item" data-category="simulation"
+           data-title="Simulation"
+           data-desc="An Unreal Engine 5 Blueprint system with drag-and-drop, stacking, and weight calculations."
+           data-download="https://yourlink.com/files.zip"
+           data-media='["placeholder1.jpg","placeholder1b.jpg","demo.mp4"]'>
+        <img src="placeholder1.jpg" alt="Simulation">
+        <h3>NPC  Routines</h3>
+      </div>
+      
+      <!-- …more projects… -->
+    </div>
+  </section>
 
-  <!-- Back-to-Top Button -->
-  <button id="backToTop" aria-label="Back to Top">↑</button>
+  <!-- Skills -->
+  <section id="skills" class="section skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Unreal Engine 5 (Blueprints, Niagara)</li>
+      <li>Unity (C#), Phaser.js</li>
+      <li>Behavior Trees & AI Design</li>
+      <li>Procedural Narrative Systems</li>
+      <li>Miro, Notion, Confluence</li>
+      <li>Adobe Suite (Photoshop, After Effects)</li>
+    </ul>
+  </section>
 
-  <!-- Fallback for users with JavaScript disabled -->
-  <noscript>Please enable JavaScript to view the full functionality of this site.</noscript>
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> •
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> •
+      <a href="YourName_Resume.pdf" download>Download Résumé</a>
+    </p>
+  </section>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <h2 id="modal-title">Project Title</h2>
+      <div class="carousel" id="modal-carousel"></div>
+      <p id="modal-desc">Project description here.</p>
+      <a id="modal-download" href="#" target="_blank" class="download-btn">Download / Visit</a>
+    </div>
+  </div>
+<div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <h2 id="modal-title">Project Title</h2>
+      <div class="carousel" id="modal-carousel"></div>
+      <p id="modal-desc">Project description here.</p>
+      <a id="modal-download" href="#" target="_blank" class="download-btn">Download / Visit</a>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
