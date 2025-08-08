@@ -1,136 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kevin Cabranes | Game Designer</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kevin cabranes</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Corner Text -->
+    <div class="corner-text corner-top-right">game designer</div>
+    <div class="corner-text corner-bottom-left">florida - havana</div>
+<div class="profile-image">
+    <img src="images/kevin-profile.png" alt="Kevin Cabranes" loading="eager">
+</div>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <a href="#home" class="nav-link active">main</a>
+        <a href="#projects" class="nav-link">projects</a>
+        <a href="#systems" class="nav-link">systems</a>
+        <a href="#narrative" class="nav-link">narrative</a>
+        <a href="#skills" class="nav-link">skills</a>
+    </nav>
 
-  <!-- Hamburger & Overlay Menu -->
-  <button id="menu-open" class="menu-btn">☰</button>
-  <div id="nav-overlay" class="nav-overlay">
-    <button id="menu-close" class="menu-btn">✕</button>
-    <ul class="menu-list">
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-  </div>
+    <!-- Header -->
+    <section id="home" class="header">
+        <h1 class="name glitch">kevin cabranes</h1>
+        <p class="tagline">game designer</p>
+        <div class="specialties-list">
+            <span>content designer</span>
+            <span>npc interactions</span>
+            <span>narrative system</span>
+            <span>unreal engine 5</span>
+        </div>
+    </section>
 
-  <!-- Hero (with avatar) -->
-  <section class="hero">
-    <img src="images/Portrait.jpg" alt="Your Name" class="hero-avatar">
-    <div class="hero-text">
-      <h1>Kevin Cabranes</h1>
-      <p>Game Designer •  Narrative Designer • Level Designer • Systems Designer</p>
-    </div>
-  </section>
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <h2 class="section-title">projects</h2>
+        <div class="projects-container">
 
-  <!-- About -->
-  <section id="about" class="section about">
-    <h2>About Me</h2>
-    <p>I’m a game designer specializing in dialogue systems, NPC simulation, and procedural narrative. Experienced in UE5 Blueprints, Design Patterns and Game Animations.</p>
-  </section>
+             <div class="project-item">
+                <div class="project-header">
+                    <h3 class="project-title">top down crpg</h3>
+                    <span class="project-year">ongoing</span>
+                </div>
+                <div class="project-role">level designer / systems designer</div>
+                <p class="project-description">
+                    comprehensive stealth gameplay featuring dynamic ai detection, environmental interactions, multi-layered level design. focuses on player agency and emergent gameplay opportunities.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-item">ue5</span>
+                    <span class="tech-item">ai perception</span>
+                    <span class="tech-item">level design</span>
+                    <span class="tech-item">sound design</span>
+                </div>
+                <div class="project-links">
+                    <a href="topdown.html" class="project-link">view details</a>
+                    <a href="#" class="project-link">documentation</a>
+                </div>
+            </div>
 
-  <!-- Projects with Filter -->
-  <section id="projects" class="section projects">
-    <h2>Project Showcases</h2>
-    <div class="filters">
-      <button data-filter="all" class="filter-btn active">All</button>
-      <button data-filter="systems" class="filter-btn">Systems</button>
-      <button data-filter="narrative" class="filter-btn">Narrative</button>
-      <button data-filter="simulation" class="filter-btn">Simulation</button>
-      <button data-filter="leveldesign" class="filter-btn">Level Design</button>
-    </div>
-    <div class="grid">
-      <!-- Example project -->
-      <div class="grid-item" data-category="systems"
-           data-title="Combat"
-           data-desc="Designed and developed a 2D beat 'em up game featuring responsive combat mechanics, enemy AI behavior, and level progression to deliver fast-paced, engaging gameplay.w"
-           data-download="https://yourlink.com/files.zip"
-           data-media='["placeholder1.jpg","placeholder1b.jpg","demo.mp4"]'>
-        <img src="images/2DBeat.png" alt="Combat">
-        <h3>2D Beat 'Em Up</h3>
-      </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <h3 class="project-title">2D Narrative Adventure</h3>
+                    <span class="project-year">2024</span>
+                </div>
+                <div class="project-role">main developer / content creator</div>
+                <p class="project-description">
+                    a 2d adventure narrative game built with modern game development tools, showcasing rich storytelling mechanics and character-driven gameplay - players explore hand-crafted environments while making meaningful choices that shape branching storylines and character relationships - this project demonstrates proficiency in multiple game development disciplines including narrative design, 2d animation systems, dialogue programming, and player progression mechanics
+                </p>
+                <div class="project-tech">
+                    <span class="tech-item">ue5 blueprints</span>
+                    <span class="tech-item">behavior trees</span>
+                    <span class="tech-item">states design pattern</span>
+                </div>
+                <div class="project-links">
+                    <a href="narrative-adventure.html" class="project-link">view details</a>
+                    <a href="#" class="project-link">documentation</a>
+                </div>
+            </div>
 
-      <div class="grid-item" data-category="narrative"
-           data-title="Dialogue"
-           data-desc="Designed and developed a 2D beat 'em up game featuring responsive combat mechanics, enemy AI behavior, and level progression to deliver fast-paced, engaging gameplay."
-           data-download="https://yourlink.com/files.zip"
-           data-media='["placeholder1.jpg","placeholder1b.jpg","demo.mp4"]'>
-        <img src="placeholder1.jpg" alt="Dialogue">
-        <h3>Branching Dialogue</h3>
-      </div>
+            <div class="project-item">
+                <div class="project-header">
+                    <h3 class="project-title">first person horror</h3>
+                    <span class="project-year">2025</span>
+                </div>
+                <div class="project-role">game designer / level designer / system design</div>
+                <p class="project-description">
+                    a first-person horror experience built in unreal engine 5, showcasing advanced physics interactions and atmospheric design - players solve environmental puzzles using realistic object manipulation while navigating a tension-filled environment - this project demonstrates proficiency in multiple game development disciplines including gameplay programming, ai behavior, audio design, and performance optimization.
+                </p>
+                <div class="project-tech">
+                    <span class="tech-item">ue5 blueprints</span>
+                    <span class="tech-item">pbr materials</span>
+                    <span class="tech-item">image processing</span>
+                </div>
+                <div class="project-links">
+                    <a href="firstp-horror.html" class="project-link">view details</a>
+                    <a href="#" class="project-link">documentation</a>
+                </div>
+            </div>
 
-      <div class="grid-item" data-category="simulation"
-           data-title="Simulation"
-           data-desc="An Unreal Engine 5 Blueprint system with drag-and-drop, stacking, and weight calculations."
-           data-download="https://yourlink.com/files.zip"
-           data-media='["placeholder1.jpg","placeholder1b.jpg","demo.mp4"]'>
-        <img src="placeholder1.jpg" alt="Simulation">
-        <h3>NPC  Routines</h3>
-      </div>
-      
-      <!-- …more projects… -->
-    </div>
-  </section>
+           
+        </div>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>C++, C#, Java, HTML and CSS.</li>
-      <li>Unreal Engine Blueprints</li>
-      <li>Photoshop Proficiency</li>
-      <li>Figma Design</li>
-      <li>Atlassian Suite</li>
-      <li>Github and Perforce as Source Control Tools</li>
+    <!-- Systems -->
+    <section id="systems" class="section">
+        <h2 class="section-title">systems work</h2>
+        <div class="projects-container">
+            <div class="project-item">
+                <div class="project-header">
+                    <h3 class="project-title">npc behavior framework</h3>
+                    <span class="project-year">ongoing</span>
+                </div>
+                <div class="project-role">systems designer</div>
+                <p class="project-description">
+                    modular ai system for creating believable npc behaviors. includes daily routines, social interactions, memory systems, and emotional responses. designed for scalability and easy iteration.
+                </p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Narrative -->
+    <section id="narrative" class="section">
+        <h2 class="section-title">narrative design</h2>
+        <div class="projects-container">
+            <div class="project-item">
+                <div class="project-header">
+                    <h3 class="project-title">interactive fiction engine</h3>
+                    <span class="project-year">2024</span>
+                </div>
+                <div class="project-role">narrative designer / developer</div>
+                <p class="project-description">
+                    custom engine for creating branching interactive stories. features include character stat tracking, consequence systems, and dynamic text generation based on player choices.
+                </p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <h2 class="section-title">skills</h2>
+        <div class="skills-container">
+            <div class="skill-block">
+                <div class="skill-category">game design</div>
+                <div class="skill-items">
+                    <span class="skill-item">systems design</span>
+                    <span class="skill-item">level design</span>
+                    <span class="skill-item">narrative design</span>
+                    <span class="skill-item">player experience</span>
+                    <span class="skill-item">game balancing</span>
+                    <span class="skill-item">prototyping</span>
+                </div>
+            </div>
 
+            <div class="skill-block">
+                <div class="skill-category">technical</div>
+                <div class="skill-items">
+                    <span class="skill-item">ue5 blueprints</span>
+                    <span class="skill-item">design patterns</span>
+                    <span class="skill-item">version control</span>
+                    <span class="skill-item">game analytics</span>
+                    <span class="skill-item">scripting</span>
+                </div>
+            </div>
 
+            <div class="skill-block">
+                <div class="skill-category">specializations</div>
+                <div class="skill-items">
+                    <span class="skill-item">dialogue systems</span>
+                    <span class="skill-item">npc simulation</span>
+                    <span class="skill-item">interactive storytelling</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </ul>
-  </section>
+    <!-- About -->
+    <section id="about" class="section">
+        <h2 class="section-title">info</h2>
+        <div class="about-container">
+            <p class="about-text">
+                passionate about creating meaningful player experiences through intelligent game design. focus on systems that respond to player choices and create emergent narratives.
+            </p>
+            <p class="about-text">
+                background spans technical implementation and creative design. enjoy bridging the gap between ambitious concepts and practical development constraints. thrive in collaborative environments.
+            </p>
+            <p class="about-text">
+                when not designing games: analyzing interactive narratives, prototyping mechanics, contributing to design communities, exploring experimental game forms.
+            </p>
+        </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:kevincabranes1998@gmail.com">kevincabranes1998@gmail.com</a></p>
-    <p>
-      <a href="https://www.linkedin.com/in/kevin-cabranes/" target="_blank">LinkedIn</a>
-      <a href="YourName_Resume.pdf" download>Download Résumé</a>
-    </p>
-  </section>
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <h2 class="section-title">contact</h2>
+        <div class="contact-container">
+            <div class="contact-item">
+                <span class="contact-label">email</span>
+                <span class="contact-value">
+                    <a href="mailto:kevincabranes98@gmail.com">kevincabranes98@gmail.com</a>
+                </span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">linkedin</span>
+                <span class="contact-value">
+                    <a href="https://www.linkedin.com/in/kevin-cabranes/">kevin-cabranes</a>
+                </span>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">portfolio</span>
+                <span class="contact-value">
+                    <a href="#">cabranes.space</a>
+                </span>
+            </div>
+                </span>
+            </div>
+        </div>
+    </section>
 
-  <!-- Project Modal -->
-  <div id="project-modal" class="modal">
-    <div class="modal-content">
-      <span id="modal-close" class="modal-close">&times;</span>
-      <h2 id="modal-title">Project Title</h2>
-      <div class="carousel" id="modal-carousel"></div>
-      <p id="modal-desc">Project description here.</p>
-      <a id="modal-download" href="#" target="_blank" class="download-btn">Download / Visit</a>
-    </div>
-  </div>
-<div id="project-modal" class="modal">
-    <div class="modal-content">
-      <span id="modal-close" class="modal-close">&times;</span>
-      <h2 id="modal-title">Project Title</h2>
-      <div class="carousel" id="modal-carousel"></div>
-      <p id="modal-desc">Project description here.</p>
-      <a id="modal-download" href="#" target="_blank" class="download-btn">Download / Visit</a>
-    </div>
-  </div>
-  <footer>
-    <p>&copy; 2025 Kevin Cabranes</p>
-  </footer>
+    <script>
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.section, .header');
 
-  <script src="script.js"></script>
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links and sections
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Show corresponding section
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        if (targetId === 'home') {
+                            targetSection.style.display = 'flex';
+                             document.getElementById('about').classList.add('active');
+                             document.getElementById('contact').classList.add('active');
+                        } else {
+                            targetSection.classList.add('active');
+                        }
+                    }
+                    
+                });
+            });
+
+            // Cursor trail effect
+            let trails = [];
+            const maxTrails = 10;
+
+            document.addEventListener('mousemove', function(e) {
+                // Create new trail dot
+                const trail = document.createElement('div');
+                trail.className = 'cursor-trail';
+                trail.style.left = e.clientX + 'px';
+                trail.style.top = e.clientY + 'px';
+                document.body.appendChild(trail);
+
+                // Add to trails array
+                trails.push(trail);
+
+                // Animate trail
+                setTimeout(() => {
+                    trail.style.opacity = '0.6';
+                }, 10);
+
+                setTimeout(() => {
+                    trail.style.opacity = '0';
+                }, 100);
+
+                // Remove after animation
+                setTimeout(() => {
+                    if (trail.parentNode) {
+                        trail.parentNode.removeChild(trail);
+                    }
+                    trails.shift();
+                }, 300);
+
+                // Limit number of trails
+                if (trails.length > maxTrails) {
+                    const oldTrail = trails.shift();
+                    if (oldTrail.parentNode) {
+                        oldTrail.parentNode.removeChild(oldTrail);
+                    }
+                }
+            });
+        });
+        document.getElementById('about').classList.add('active');
+        document.getElementById('contact').classList.add('active');
+    </script>
 </body>
 </html>
